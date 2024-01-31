@@ -1,0 +1,59 @@
+.admin{
+    padding-top:120px;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+.admin .first-row{
+    text-align: left;
+}
+
+.admin-body th{
+    font-weight: 500;
+}
+form{
+    padding:50px;
+    width: 40%;
+}
+h2{
+    padding-top:20px;
+    padding-left:50px;
+}
+
+.description-input{
+    height:200px;
+    line-break: auto;
+}
+
+.buton{
+    text-align: right;
+}
+
+.btn{
+    font-size:15px;
+}
+/* 
+#edit-form{
+    width:800px;
+} */
+
+#editMovieModal{
+    text-align: center;
+    align-items: center;
+}
+
+.modal-form{
+    width: 100%;
+    padding: 0;
+    align-items: center;
+}
+
+.modal-content{
+    padding:0;
+}
+
+.error-message{
+    color:red;
+    text-align: left;
+}
+

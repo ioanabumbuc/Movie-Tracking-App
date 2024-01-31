@@ -1,0 +1,46 @@
+<app-header></app-header>
+<div class="empty-div"></div>
+<div class="d-flex mt-5 justify-content-center align-items-center">
+  <div class="me-5">
+    <img
+      class="user-image shadow"
+      src="https://st3.depositphotos.com/6672868/13701/v/600/depositphotos_137014128-stock-illustration-user-profile-icon.jpg">
+  </div>
+  <div class="d-flex flex-column align-items-center">
+    <h1>Welcome to your profile page, {{user.username}}!</h1>
+    <hr class="line">
+    <h5 class="mt-4">Here you can see your liked movies and your watchlist</h5>
+  </div>
+</div>
+<div class="container-fluid px-3 mt-5">
+  <h3 class="ps-5">Liked Movies:</h3>
+  <div *ngIf="liked.length" class="d-flex justify-content-center">
+    <div *ngFor="let movie of liked.slice(0,4)">
+      <app-movie-card
+        [movie]="movie"
+        [isInProfile]="true"
+        [isLoggedIn]="false"></app-movie-card>
+    </div>
+  </div>
+  <div *ngIf="liked.length==0">
+    <h5 class="ms-5 mt-4 fst-italic">Nothing to see here... hit like on some movies!</h5>
+  </div>
+</div>
+<div class="d-flex justify-content-center mt-3"><hr class="long-line"></div>
+
+
+<div class="container-fluid px-3 mt-3">
+  <h3 class="ps-5">Watchlist:</h3>
+  <div class="d-flex justify-content-center">
+    <div *ngFor="let movie of watchlist.slice(0,4)">
+      <app-movie-card
+        [movie]="movie"
+        [isInProfile]="true"
+        [isLoggedIn]="false"></app-movie-card>
+    </div>
+  </div>
+  <div *ngIf="watchlist.length==0">
+    <h5 class="ms-5 mt-4 fst-italic">Nothing to see here... add some movies to your watch list!</h5>
+  </div>
+</div>
+

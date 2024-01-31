@@ -1,0 +1,26 @@
+<app-header></app-header>
+<app-carousel></app-carousel>
+<app-search-movie (newMoviesEvent)="searchedItems($event)"
+                  (movieTitleEmitter)="searchedMovie($event)"></app-search-movie>
+<div class="all-cards">
+  <div class="card-body">
+    <div *ngFor="let movie of pageOfMovies; index as index ">
+      <app-movie-card
+        [movie]="movie"
+        [user]="user"
+        [isLoggedIn]="isLoggedIn"
+        [isLiked]="isLiked[index]"
+        [isInWatchlist]="isInWatchlist[index]"></app-movie-card>
+    </div>
+  </div>
+
+
+  <div *ngIf="(pageOfMovies | searchFilter:movieTitle).length === 0" class="no-movies-found">
+    <h2>No movies found</h2>
+  </div>
+  <div class="card-footer pb-0 pt-3">
+    <jw-pagination
+      [pageSize]="6" [items]="movies | searchFilter:movieTitle" (changePage)="onChangePage($event)"></jw-pagination>
+  </div>
+</div>
+<app-footer></app-footer>

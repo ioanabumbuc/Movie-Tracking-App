@@ -1,0 +1,17 @@
+.filter-btn{
+  height:40px;
+  padding:5px 20px 5px 20px;
+  background-color: var(--primary);
+  color: white;
+  border-radius:20px;
+}
+.filter-btn:hover{
+  background-color: var(--dark-violet) !important;
+}
+
+.select-genre{
+  height:40px;
+  width:160px;
+  background-color:var(--primary);
+  color:white;
+}

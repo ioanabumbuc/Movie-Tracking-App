@@ -1,0 +1,53 @@
+.empty-div{
+    height:80px;
+    /* padding-top: 100px; */
+}
+/*
+.carousel-inner div {
+    height: 600px;
+    width:100%;
+    object-fit: cover;
+} */
+.container-fluid{
+    width: 100%;
+    height: 600px;
+    object-fit: cover;
+    padding:0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    align-items:center;
+    /* background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-size: 100% 100%;
+    background-attachment: fixed; */
+}
+
+img{
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+}
+.carousel-caption{
+  bottom:50%;
+}
+.carousel-caption h3{
+  font-size:30px;
+}
+
+/* .container-fluid .wrapper{
+    width: 100%;
+    height:300px; */
+    /* object-fit: cover;
+    background-size: cover;
+    background-position: center; */
+
+
+/* .wrapper img{
+    object-fit: contain;
+}
+
+.slide-ngb{
+    object-fit: cover;
+} */

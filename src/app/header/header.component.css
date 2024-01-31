@@ -1,0 +1,42 @@
+.header{
+  height:80px;
+  position: fixed;
+  z-index:200;
+  padding:0;
+}
+.container-fluid{
+  background-color:var(--light-violet);
+}
+.header-content{
+  display:flex;
+  justify-content: space-between;
+  height: 100%;
+}
+.header-item{
+  cursor: pointer;
+  padding-top:23px;
+  padding-left:30px;
+  padding-right: 30px;
+  color:black;
+  font-size:20px;
+}
+
+.header-item:hover{
+  background-color: var(--dark-violet);
+  color:white;
+  transition-duration: 200ms;
+}
+.header-left,.header-right{
+  display: flex;
+  height: 100%;
+  align-content: center;
+}
+
+.welcome-message{
+  padding-top:23px;
+  padding-left:30px;
+  padding-right: 20px;
+  color:var(--dark-violet);
+  font-size:20px;
+  font-weight: 700;
+}

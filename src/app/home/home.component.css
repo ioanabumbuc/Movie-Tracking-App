@@ -1,0 +1,68 @@
+p{
+    padding-top:100px;
+}
+
+.all-cards{
+    width: 100%;
+    /* display: flex;
+    flex-wrap: wrap;
+    justify-content: center; */
+}
+
+.card-body{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.card-footer{
+    display: flex;
+    justify-content: center;
+}
+
+
+.no-movies-found{
+    padding:100px;
+}
+
+.active{
+    background-color:#828ED4 ;
+}
+
+.page-link a{
+    background-color: #828ED4;
+    --bs-pagination-active-bg:#828ED4;
+}
+
+.card-footer .page-link{
+    --bs-pagination-active-color:var(--primary);
+}
+
+.pagination > li > a
+{
+  background-color: white;
+  color: var(--primary);
+}
+
+.pagination > li > a:focus,
+.pagination > li > a:hover,
+.pagination > li > span:focus,
+.pagination > li > span:hover
+{
+  color: var(--primary);
+  background-color: #eee;
+  border-color: var(--primary);
+}
+
+.pagination > .active > a
+{
+  color: white;
+  background-color: var(--primary) !Important;
+  border: solid 1px var(--primary) !Important;
+}
+
+.pagination > .active > a:hover
+{
+  background-color: var(--primary) !Important;
+  border: solid 1px var(--primary);
+}

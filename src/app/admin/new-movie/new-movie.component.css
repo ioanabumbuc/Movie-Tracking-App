@@ -1,0 +1,24 @@
+form{
+    padding:50px;
+
+}
+h2{
+    padding-top:20px;
+    padding-left:50px;
+}
+
+.description-input{
+    height:200px;
+}
+
+.buton{
+    text-align: right;
+}
+
+.btn{
+    font-size:20px;
+}
+
+.error-message{
+    color:red;
+}

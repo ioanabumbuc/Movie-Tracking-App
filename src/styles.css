@@ -1,0 +1,29 @@
+/* You can add global styles to this file, and also import other style files */
+@import 'variables.css';
+
+a{
+  text-decoration: none;
+}
+
+.empty-div{
+  height:80px;
+}
+
+.btn-primary{
+  padding: 7px 30px 7px 30px;
+  border-radius: 20px;
+  background-color: var(--primary);
+}
+
+.btn-secondary{
+  padding: 7px 30px 7px 30px;
+  border-radius: 20px;
+}
+
+.icon{
+  cursor:pointer;
+}
+
+.container-fluid{
+  margin:0;
+}

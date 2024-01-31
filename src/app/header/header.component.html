@@ -1,0 +1,36 @@
+<header>
+  <div class="container-fluid header shadow">
+    <div class="header-content">
+      <div class="header-left">
+        <div
+          (click)="onHomeClick()"
+          class="header-item">
+          Home
+        </div>
+      </div>
+      <div *ngIf="!isLoggedIn" class="header-right">
+        <div
+          (click)="onLoginClick()"
+          class="header-item">
+          Login
+        </div>
+        <div
+          (click)="onRegisterClick()"
+          class="header-item">
+          Register
+        </div>
+      </div>
+      <div *ngIf="isLoggedIn" class="header-right">
+        <div class="welcome-message">Welcome {{username}}!</div>
+        <div
+          (click)="onProfileClick()"
+          class="header-item"
+        >My profile</div>
+        <div
+          (click)="logout()"
+          class="header-item"
+        >Log out</div>
+      </div>
+    </div>
+  </div>
+</header>

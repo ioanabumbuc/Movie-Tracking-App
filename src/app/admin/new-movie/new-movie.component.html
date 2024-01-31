@@ -1,0 +1,64 @@
+<h2>Add a new movie! :)</h2>
+<form [formGroup]="newMovieForm" (ngSubmit)="onSubmit()">
+    <div class="mb-3 row">
+        <label for="title" class="col-sm-2 col-form-label">Title</label>
+        <div class="col-sm-4">
+            <input type="text" class="form-control" formControlName="title" id="title">
+            <div class="error-message" *ngIf="!newMovieForm.controls.title.valid  &&
+            (newMovieForm.controls.title.dirty|| newMovieForm.controls.title.touched)">
+                Title is required
+            </div>
+        </div>
+    </div>
+    <div class="mb-3 row">
+        <label for="genre" class="col-sm-2 col-form-label">Genre</label>
+        <div class="col-sm-4">
+            <input type="text" class="form-control" formControlName="genre" id="genre">
+            <div class="error-message" *ngIf="!newMovieForm.controls.genre.valid  &&
+            (newMovieForm.controls.genre.dirty || newMovieForm.controls.genre.touched)">
+                Genre is required
+            </div>
+        </div>
+    </div>
+    <div class="mb-3 row">
+        <label for="year" class="col-sm-2 col-form-label">Year</label>
+        <div class="col-sm-4">
+            <input type="text" class="form-control" formControlName="year" id="year">
+            <div class="error-message" *ngIf="!newMovieForm.controls.year.valid  &&
+            (newMovieForm.controls.year.dirty || newMovieForm.controls.year.touched)">
+                Year is required and must be 4 numbers
+            </div>
+        </div>
+    </div>
+    <div class="mb-3 row">
+        <label for="rating" class="col-sm-2 col-form-label">Rating</label>
+        <div class="col-sm-4">
+            <input type="text" class="form-control" formControlName="rating" id="rating">
+            <div class="error-message" *ngIf="!newMovieForm.controls.rating.valid  &&
+            (newMovieForm.controls.rating.dirty || newMovieForm.controls.rating.touched)">
+                Rating is required and must be a number between 1 and 10
+            </div>
+        </div>
+    </div>
+    <div class="mb-3 row">
+        <label for="videoUrl" class="col-sm-2 col-form-label">Video URL</label>
+        <div class="col-sm-4">
+            <input type="text" class="form-control" formControlName="videoUrl" id="videoUrl">
+        </div>
+    </div>
+    <div class="mb-3 row">
+        <label for="imageUrl" class="col-sm-2 col-form-label">Image URL</label>
+        <div class="col-sm-4">
+            <input type="text" class="form-control" formControlName="imageUrl" id="imageUrl">
+        </div>
+    </div>
+    <div class="mb-3 row">
+        <label for="description" class="col-sm-2 col-form-label">Description</label>
+        <div class="col-sm-4">
+            <textarea type="text" class="form-control description-input" formControlName="description" id="description"></textarea>
+        </div>
+    </div>
+    <div>
+        <button type="submit" [disabled]="!newMovieForm.valid" class="btn btn-primary">Submit</button>
+    </div>
+</form>

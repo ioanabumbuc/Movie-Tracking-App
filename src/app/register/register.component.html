@@ -1,0 +1,72 @@
+<app-header></app-header>
+<div class="empty-div"></div>
+<div class="login-wrapper">
+  <div class="login-container">
+    <h3 *ngIf="!registerSuccess" class="mb-5">Register to movie tracking system</h3>
+    <form *ngIf="!registerSuccess">
+      <div class="mb-3">
+        <label for="username" class="form-label">Username</label>
+        <input
+          #usernameField="ngModel"
+          [(ngModel)]="username"
+          [required]="true"
+          type="text"
+          class="form-control"
+          id="username"
+          name="username"
+          autocomplete="off">
+        <div [ngClass]="{'d-block':usernameField.touched && username===''}" class="invalid-feedback">Username is
+          required
+        </div>
+      </div>
+      <div class="mb-3">
+        <label for="password" class="form-label">Password</label>
+        <input
+          #passwordField="ngModel"
+          [(ngModel)]="password"
+          [required]="true"
+          type="password"
+          class="form-control"
+          id="password"
+          name="password"
+          autocomplete="off">
+        <div [ngClass]="{'d-block':passwordField.touched && password===''}" class="invalid-feedback">Password is
+          required
+        </div>
+      </div>
+      <div class="mb-3">
+        <label for="email" class="form-label">Email</label>
+        <input
+          #emailField="ngModel"
+          [(ngModel)]="email"
+          [required]="true"
+          type="text"
+          class="form-control"
+          id="email"
+          name="email"
+          autocomplete="off">
+        <div [ngClass]="{'d-block':emailField.touched && email===''}" class="invalid-feedback">Email is required</div>
+      </div>
+      <div
+        [ngClass]="{'d-block':invalidRegister}"
+        class="invalid-feedback mb-4">Username already exists - pick another
+      </div>
+      <div class="d-flex justify-content-center">
+        <button
+          [disabled]="username==='' || password===''"
+          (click)="onRegister()"
+          type="submit"
+          class="btn btn-primary"
+        >Register
+        </button>
+      </div>
+    </form>
+    <div *ngIf="!registerSuccess" class="mt-4">
+      <span>Already have an account?</span>
+      <span (click)="onLogin()" class="login ms-2">Login!</span>
+    </div>
+
+    <h3 *ngIf="registerSuccess" class="mb-5">User registered successfully!</h3>
+    <span *ngIf="registerSuccess" (click)="onLogin()" class="login">Login now!</span>
+  </div>
+</div>

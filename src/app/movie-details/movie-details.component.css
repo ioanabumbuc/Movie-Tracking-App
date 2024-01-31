@@ -1,0 +1,73 @@
+
+.details {
+  width: 100%;
+  padding: 110px;
+  padding-top: 150px;
+  display: flex;
+  justify-content: space-evenly;
+  background-color: rgba(255, 194, 153, 0.26);
+  margin: 0;
+}
+
+.left-details img {
+  width: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  object-fit: contain;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.right-details {
+  overflow: hidden;
+}
+
+.description {
+  padding-top: 30px;
+}
+
+.rating {
+  display: flex;
+}
+
+.rating .rating-nb {
+  color: blue;
+  font-weight: 600;
+}
+
+.rating .rating-ten {
+  font-weight: 350;
+}
+
+.movie-list {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+.icon{
+  cursor: pointer;
+}
+
+.related-movies h2 {
+  padding: 50px;
+}
+
+.open-modal {
+  margin-top: 30px;
+  font-size: 20px;
+  color: white;
+  background-color: var(--primary);
+  border-radius: 20px;
+  padding: 5px 20px 5px 20px;
+}
+
+
+.youtube-modal {
+  align-items: center;
+}
+
+/*.modal-content {*/
+/*  width: 600px;*/
+/*}*/
+

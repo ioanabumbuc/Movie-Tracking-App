@@ -1,0 +1,19 @@
+.user-image{
+  height: 200px;
+  border-radius: 100%;
+}
+
+.line{
+  width:170px;
+  color:var(--dark-violet);
+  margin-top:25px;
+  margin-bottom: 0px;
+  border-top: 2px solid;
+}
+
+.long-line{
+  width: 90%;
+  text-align: center;
+  border-top: 2px solid;
+  color:var(--dark-violet);
+}
